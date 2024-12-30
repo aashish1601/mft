@@ -127,28 +127,34 @@ const App = () => {
         {/* Mobile-optimized sections */}
       <main className="pt-20 sm:pt-24">
         {/* Hero Section */}
-        <section className="px-4 py-12 sm:py-16 bg-gradient-to-br from-stone-50 to-[#F5E6D3]">
-  <div className="container mx-auto max-w-4xl">
-    <div className="text-center space-y-6">
-      <h1 className="text-3xl sm:text-5xl font-bold text-stone-800">Mumbai's Future Tycoons</h1>
-      <p className="text-base sm:text-xl text-stone-600">First-ever entrepreneurship search & mentorship platform</p>
-      
-      <div className="grid grid-cols-3 gap-3 sm:gap-6 my-8 sm:my-12">
-        {heroImages.map((image, index) => (
-          <div key={index} className="aspect-[4/3] rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <img
-              src={image.src}
-              alt={image.alt}
-              className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
-            />
-          </div>
-        ))}
-      </div>
-      
-      <div className="inline-block">
-        <button className="bg-stone-800 text-white px-8 py-2.5 rounded-full text-sm font-semibold hover:bg-stone-700 transition-colors duration-300 shadow-md hover:shadow-lg">
+        <section className="pt-24 pb-12 bg-gradient-to-br from-stone-50 to-[#F5E6D3] text-stone-800">
+  <div className="container mx-auto px-4 py-8 sm:py-16">
+    <div className="grid lg:grid-cols-2 gap-8 items-center">
+      <div className="space-y-6 sm:space-y-8 text-center lg:text-left">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">Mumbai's Future Tycoons</h1>
+        <p className="text-lg sm:text-xl mb-6 sm:mb-8">First-ever entrepreneurship search & mentorship platform</p>
+        
+        <div className="grid grid-cols-3 gap-3 sm:gap-4 mb-6 sm:mb-8">
+          {heroImages.map((image, index) => (
+            <div key={index} className="relative group">
+              <div className="overflow-hidden rounded-lg shadow-md transition-transform duration-300 transform group-hover:scale-105">
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-24 sm:h-32 object-cover"
+                />
+                <div className="absolute inset-0 bg-stone-800 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <button className="w-full sm:w-auto bg-stone-800 text-white px-6 py-3 rounded-full font-bold hover:bg-stone-900 transition">
           Register Now
         </button>
+      </div>
+      <div className="hidden lg:block">
+        <img src="/images/student.png" alt="Students collaborating" className="rounded-lg shadow-xl" />
       </div>
     </div>
   </div>
