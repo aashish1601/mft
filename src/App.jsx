@@ -127,28 +127,32 @@ const App = () => {
         {/* Mobile-optimized sections */}
       <main className="pt-20 sm:pt-24">
         {/* Hero Section */}
-        <section className="px-4 py-8 bg-gradient-to-br from-stone-50 to-[#F5E6D3]">
-          <div className="text-center space-y-4">
-            <h1 className="text-2xl sm:text-4xl font-bold">Mumbai's Future Tycoons</h1>
-            <p className="text-sm sm:text-lg">First-ever entrepreneurship search & mentorship platform</p>
-            
-            <div className="grid grid-cols-3 gap-2 sm:gap-4 my-6">
-              {heroImages.map((image, index) => (
-                <div key={index} className="aspect-video rounded-lg overflow-hidden shadow-md">
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              ))}
-            </div>
-
-            <button className="w-full sm:w-auto bg-stone-800 text-white px-6 py-3 rounded-full text-sm font-bold">
-              Register Now
-            </button>
+        <section className="px-4 py-12 sm:py-16 bg-gradient-to-br from-stone-50 to-[#F5E6D3]">
+  <div className="container mx-auto max-w-4xl">
+    <div className="text-center space-y-6">
+      <h1 className="text-3xl sm:text-5xl font-bold text-stone-800">Mumbai's Future Tycoons</h1>
+      <p className="text-base sm:text-xl text-stone-600">First-ever entrepreneurship search & mentorship platform</p>
+      
+      <div className="grid grid-cols-3 gap-3 sm:gap-6 my-8 sm:my-12">
+        {heroImages.map((image, index) => (
+          <div key={index} className="aspect-[4/3] rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <img
+              src={image.src}
+              alt={image.alt}
+              className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
+            />
           </div>
-        </section>
+        ))}
+      </div>
+      
+      <div className="inline-block">
+        <button className="bg-stone-800 text-white px-8 py-2.5 rounded-full text-sm font-semibold hover:bg-stone-700 transition-colors duration-300 shadow-md hover:shadow-lg">
+          Register Now
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
 
         {/* What is MFT Section - Enhanced with SDG focus */}
   <section className="py-12 sm:py-16 bg-white">
